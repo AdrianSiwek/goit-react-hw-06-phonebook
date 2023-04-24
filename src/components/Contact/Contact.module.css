@@ -1,0 +1,19 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+}
+
+.btn:hover,
+.btn:focus {
+    color: aliceblue;
+    background-color: rgb(229, 94, 105);
+}
+
+.btn span {
+    margin-right: 5px;
+}

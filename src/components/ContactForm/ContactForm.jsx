@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "../../redux/contactSlice";
+import { addContact } from "../../redux/contactsSlice";
 import { getContacts } from "../../redux/selectors";
 import PropTypes from 'prop-types';
 import styles from './ContactForm.module.css';
@@ -33,13 +33,7 @@ const ContactForm = () => {
     };
     
 
-    
-
-
-    
-
-
-        return (
+    return (
             <div>
                 <form className={styles.submit} onSubmit={handleSubmit}>
                     <label className={styles.label}>
