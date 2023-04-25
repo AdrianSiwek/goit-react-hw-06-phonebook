@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/contactsSlice";
 import { getContacts } from "../../redux/selectors";
-import PropTypes from 'prop-types';
+
 import styles from './ContactForm.module.css';
 
 
@@ -29,7 +29,7 @@ const ContactForm = () => {
             return;
         }
             dispatch(addContact(name, number));
-            contacts.reset();
+            event.target.reset();
     };
     
 
@@ -70,8 +70,5 @@ const ContactForm = () => {
     }
 
  
-ContactForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default ContactForm;
