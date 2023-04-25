@@ -14,11 +14,15 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(
   persistConfig,
-  combineReducers({ contacts: contactsReducer, filter: filtersReducer })
+  combineReducers({ contacts: contactsReducer, filters: filtersReducer })
 );
 
 export const store = configureStore({
   reducer: persistedReducer,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 export const persistor = persistStore(store);

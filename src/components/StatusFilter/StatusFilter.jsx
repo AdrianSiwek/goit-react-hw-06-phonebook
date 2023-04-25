@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-import { setStatusFilter } from 'redux/filterSlice';
-import PropTypes from 'prop-types';
+
+
 import style from './StatusFilter.module.css';
+import { setStatusFilter } from 'redux/filterSlice';
 
 
 const StatusFilter = () => {
@@ -27,9 +28,5 @@ const StatusFilter = () => {
 }
 
 
-StatusFilter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
  
 export default StatusFilter;
